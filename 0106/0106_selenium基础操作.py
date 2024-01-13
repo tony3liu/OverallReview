@@ -110,7 +110,7 @@ ele.click()
 ### 可以在元素可见后用鼠标点
 action.click(ele)
 ### 还可以用js点击,可以绕过一些特殊问题
-ele.execute_script('argument[0].click()', ele)
+ele.execute_script('argument[0].click();', ele)
 
 # 2种切换iframe
 ### 这是最基础的切换操作，因为ifarme有可能不能及时可用，往往失败率很高
@@ -169,8 +169,8 @@ driver.execute_script('window.scrollTo(document.body.scrollHeight)')
 # 处理日期控件，有些日期控件只能点选不能输入，这样直接去点选操作非常繁琐，直接js去禁掉控件的ReadOnly
 driver.execute_script('document.getElementById("控件id").readOnly = false;')
 """输入前，先清理"""
-driver.find_element('id','控件id').clear()
+driver.find_element('id', '控件id').clear()
 """再输入"""
-driver.find_element('id','控件id').send_keys('2024-01-06')
+driver.find_element('id', '控件id').send_keys('2024-01-06')
 """或者用js直接输入日期，效果相同"""
 driver.execute_script('document.getElementByID("控件id").value("2024-01-06")')
