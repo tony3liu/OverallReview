@@ -55,3 +55,17 @@ xpath = '//*[contains(@src, "www.baidu.com")]'
 xpath2 = '//img[contains(@src,"pic.img")]'
 text_test1 = '复习自动化测试技术'
 xpath3 = '//div[contains(text(), "化测试技")]'
+
+
+# 默写单例模式
+class Singleton(object):
+    instance = None
+
+    def __init__(self):
+        pass
+
+    def __new__(cls, *args, **kwargs):
+        if cls.instance:
+            return cls.instance
+        cls.instance = object.__new__(cls)
+        return cls.instance
