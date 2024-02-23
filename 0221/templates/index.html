@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中国联通</title>
+    <link rel="stylesheet" href="index_css.css"/>
+</head>
+<body>
+    <h1 class="c2">中国联通</h1>
+    <div>
+        <input type="text"/>
+        <input type="password">
+        <input type="file">
+        <input type="radio" name="1">单选1
+        <input type="radio" name="1">单选2
+        <input type="checkbox">复选框
+        <input type="button" value="按钮"> -- 普通按钮
+        <input type="submit" value="提交"> -- 提交表单
+        <select>单选下拉框
+            <option>beijing</option>
+            <option>sh</option>
+            <option>sz</option>
+        </select>
+        <select multiple>多选下拉框
+            <option>beijing</option>
+            <option>sh</option>
+            <option>sz</option>
+        </select>
+
+        多行文本输入框<textarea rows="3"></textarea>
+
+    </div>
+    <div>
+        <form method="get" action="/show/info">
+            账号<input type="text" name="uu">
+            密码<input type="password" name="pp">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+    <div>
+        <form method="post" action="/show/info2">
+            账号2<input type="text" name="uu">
+            密码2<input type="password" name="pp">
+            <input type="submit" value="提交2">
+        </form>
+    </div>
+
+</body>
+</html>
