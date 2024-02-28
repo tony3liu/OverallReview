@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息填报</title>
+</head>
+<body>
+<form method="post" action="/user/info">
+    <div>
+        用户名：<input type="text" placeholder="请输入用户名" name="userName">
+    </div>
+    <div>
+        年龄：<input type="text" placeholder="年龄" name="age">
+    </div>
+    <div>
+        <input type="submit" value="提交">
+    </div>
+</form>
+<form method="get" action="/user/query">
+    <input type="submit" value="刷新">
+</form>
+<ul class="user_list">
+<!--    <script>console.log(data_list)</script>-->
+    {% for item in data_list %}
+    <li>{{ item.username }} {{ item.age }}</li>
+    {% endfor %}
+</ul>
+</body>
+
+<script src="/Users/liutao/PycharmProjects/OverallReview/0228/jQuery.min.js"></script>
+<script src="/Users/liutao/PycharmProjects/OverallReview/0228/render_font.js"></script>
+</html>
